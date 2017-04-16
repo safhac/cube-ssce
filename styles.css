@@ -1,0 +1,98 @@
+html {
+    margin: 0 auto;
+}
+
+body {
+    height: inherit;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+    margin: inherit;
+}
+
+
+#container {
+    perspective: 500px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    overflow: hidden;
+    width: 100vw;
+    height: 98vh;
+}
+
+.cube {
+    opacity: 1;
+    border: solid thin lightgray;
+    transform-style: preserve-3d;
+    transform-origin: right center;
+    width: 50vw;
+    height: 50vh;
+    transition: transform 1s ease-in-out;
+
+}
+
+.wall {
+    border: solid thin lightgray;
+    position: absolute;
+    height: 99%;
+    width: 99%;
+}
+
+.center {
+    transform-origin: center center;
+    transform: translateZ(-50vh);
+    transition: opacity 0.5s linear;
+}
+
+.right {
+    right: 0;
+    transform-origin: right center;
+    transform: rotateY(-90deg);
+}
+
+.left {
+    transform-origin: left center;
+    transform: rotateY(90deg);
+}
+
+.toRight {
+  transform-origin: right center;
+  transform: rotateY(-90deg);
+}
+.cube.toRight>.center {
+    opacity: 0;
+}
+div[class*="to"] {
+    transition: all 0.5s ease-in-out;
+}
+
+.green {
+    background-color: lightseagreen;
+}
+
+.gray {
+    background-color: lightgray;
+}
+
+.pink {
+    background-color: lightpink;
+}
+
+.bisque {
+    background-color: bisque;
+}
+
+.blue {
+    background-color: cornflowerblue;
+}
+
+.gold {
+    background-color: darkgoldenrod;
+}
